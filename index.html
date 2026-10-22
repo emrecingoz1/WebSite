@@ -1,0 +1,429 @@
+<!DOCTYPE html>
+<html lang="tr">
+
+<head>
+    <meta charset="UTF-8">
+
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1.0">
+
+    <title>Birlikte Bir Şeyler Yapalım mı?</title>
+
+    <link rel="preconnect"
+          href="https://fonts.googleapis.com">
+
+    <link rel="preconnect"
+          href="https://fonts.gstatic.com"
+          crossorigin>
+
+    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:wght@500;600;700&display=swap"
+          rel="stylesheet">
+
+    <link rel="stylesheet"
+          href="style.css">
+</head>
+
+<body>
+
+<main class="page">
+
+    <!-- ========================================
+         1. SORU EKRANI
+    ========================================= -->
+
+    <section class="card question-card"
+             id="questionScreen">
+
+        <div class="flower flower-1">
+            🌷
+        </div>
+
+        <div class="flower flower-2">
+            🌸
+        </div>
+
+        <div class="small-text">
+            Sana küçük bir teklifim var...
+        </div>
+
+        <h1>
+            Birlikte<br>
+            bir şeyler yapalım mı?
+        </h1>
+
+        <p class="subtitle">
+            Biraz sohbet ederiz,<br>
+            güzel vakit geçiririz. 😊
+        </p>
+
+        <div class="buttons">
+
+            <button class="yes-btn"
+                    id="yesButton"
+                    type="button">
+
+                Olur
+
+            </button>
+
+            <button class="no-btn"
+                    id="noButton"
+                    type="button">
+
+                Yok
+
+            </button>
+
+        </div>
+
+        <div class="hint"
+             id="noHint">
+        </div>
+
+    </section>
+
+
+    <!-- ========================================
+         2. EVET EKRANI
+    ========================================= -->
+
+    <section class="card date-card hidden"
+             id="dateScreen">
+
+        <div class="date-decoration">
+            ꫂ❁
+        </div>
+
+        <div class="small-text">
+            Tamamdır
+        </div>
+
+        <h1>
+            O zaman<br>
+            <span>anlaştık!</span>
+        </h1>
+
+        <p class="date-message">
+
+
+            Bir gün buluşup biraz takılır,
+            sohbet ederiz.
+        </p>
+
+        <button class="plan-btn"
+                id="planButton"
+                type="button">
+
+            Hadi planlayalım
+
+        </button>
+
+    </section>
+
+
+    <!-- ========================================
+         3. PLANLAMA EKRANI
+    ========================================= -->
+
+    <section class="card plan-card hidden"
+             id="planScreen">
+
+        <div class="small-text">
+            Şimdi sıra detaylarda...
+        </div>
+
+        <h2>
+            Ne zaman buluşalım?
+        </h2>
+
+
+        <!-- TARİH -->
+
+
+        <div class="form-group">
+
+            <label>
+                Hangi gün?
+            </label>
+
+            <div class="date-options">
+
+                <button class="date-option"
+                        data-date="2026-10-23"
+                        type="button">
+
+                    <span class="date-day">
+                        23
+                    </span>
+
+                    <span>
+                        Ekim
+                    </span>
+
+                    <small>
+                        Cuma
+                    </small>
+
+                </button>
+
+
+                <button class="date-option"
+                        data-date="2026-10-24"
+                        type="button">
+
+                    <span class="date-day">
+                        24
+                    </span>
+
+                    <span>
+                        Ekim
+                    </span>
+
+                    <small>
+                        Cumartesi
+                    </small>
+
+                </button>
+
+
+                <button class="date-option"
+                        data-date="2026-10-25"
+                        type="button">
+
+                    <span class="date-day">
+                        25
+                    </span>
+
+                    <span>
+                        Ekim
+                    </span>
+
+                    <small>
+                        Pazar
+                    </small>
+
+                </button>
+
+            </div>
+
+        </div>
+
+
+
+        <!-- SAAT -->
+
+        <div class="form-group">
+
+            <label for="timeInput">
+                Saat kaçta?
+            </label>
+
+            <input type="time"
+                   id="timeInput">
+
+        </div>
+
+
+        <!-- AKTİVİTE -->
+
+        <div class="form-group">
+
+            <label>
+                Ne yapalım?
+            </label>
+
+            <div class="activities">
+
+                <button class="activity"
+                        data-activity="Kahve"
+                        type="button">
+
+                    <span class="activity-icon">
+                        ☕
+                    </span>
+
+                    <span>
+                        Kahve
+                    </span>
+
+                </button>
+
+
+                <button class="activity"
+                        data-activity="Film"
+                        type="button">
+
+                    <span class="activity-icon">
+                        🎬
+                    </span>
+
+                    <span>
+                        Film
+                    </span>
+
+                </button>
+
+
+                <button class="activity"
+                        data-activity="Akşam Yemeği"
+                        type="button">
+
+                    <span class="activity-icon">
+                        🍝
+                    </span>
+
+                    <span>
+                        Akşam Yemeği
+                    </span>
+
+                </button>
+
+
+                <button class="activity"
+                        data-activity="Parkta Yürümek"
+                        type="button">
+
+                    <span class="activity-icon">
+                        🌳
+                    </span>
+
+                    <span>
+                        Parkta Yürümek
+                    </span>
+
+                </button>
+
+            </div>
+
+        </div>
+
+
+        <p class="error-message"
+           id="errorMessage">
+        </p>
+
+
+        <button class="plan-btn"
+                id="savePlanButton"
+                type="button">
+
+            Tamamdır, planlayalım
+
+        </button>
+
+    </section>
+
+
+    <!-- ========================================
+         4. SONUÇ EKRANI
+    ========================================= -->
+
+    <section class="card summary-card hidden"
+             id="summaryScreen">
+
+        <div class="success-heart">
+            ✓
+        </div>
+
+        <div class="small-text">
+            Tamamdır, karar verildi.
+        </div>
+
+        <h1>
+            Buluşma<br>
+            planımız hazır.
+        </h1>
+
+
+        <div class="summary-box">
+
+            <div class="summary-row">
+
+                <span>
+                    📅
+                </span>
+
+                <div>
+
+                    <small>
+                        Tarih
+                    </small>
+
+                    <strong id="summaryDate">
+                    </strong>
+
+                </div>
+
+            </div>
+
+
+            <div class="summary-row">
+
+                <span>
+                    🕐
+                </span>
+
+                <div>
+
+                    <small>
+                        Saat
+                    </small>
+
+                    <strong id="summaryTime">
+                    </strong>
+
+                </div>
+
+            </div>
+
+
+            <div class="summary-row">
+
+                <span id="summaryActivityIcon">
+                    •
+                </span>
+
+                <div>
+
+                    <small>
+                        Planımız
+                    </small>
+
+                    <strong id="summaryActivity">
+                    </strong>
+
+                </div>
+
+            </div>
+
+        </div>
+
+
+        <p class="final-message">
+
+            Güzel bir gün olur bence. :)
+
+            <br><br>
+
+            Biraz sohbet eder,
+            bir şeyler yer veya içer,
+            sonra da günün nasıl geçtiğine bakarız.
+
+            <br><br>
+
+            Görüşürüz.
+
+        </p>
+
+    </section>
+
+</main>
+
+
+<script type="module"
+        src="script.js">
+</script>
+
+</body>
+
+</html>
